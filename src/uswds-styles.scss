@@ -1,0 +1,15 @@
+/* src/uswds-styles.scss */
+
+// 1. Configure USWDS settings *before* loading the system.
+// We point these to the folders we created in vite.config.js
+@use 'uswds-core' with (
+  // Turn off USWDS notifications that appear during development
+  $theme-show-notifications: false,
+  $theme-font-path: '/assets/fonts',
+  $theme-image-path: '/assets/img'
+);
+
+// 2. Load full USWDS design system
+@forward 'uswds';
+//or only the components needed
+//example @use 'usa-button';
